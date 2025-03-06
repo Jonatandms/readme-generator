@@ -159,48 +159,48 @@ def load_config():
     project_name = input("📌 Nombre del Proyecto: ") or "My Project"
     project_description = input("📝 Descripción del Proyecto: ") or "Descripción generada automáticamente."
     language = input("🌎 Idioma del README (es/en/fr/etc.): ") or "es"
-    include_screenshots = input("📸 ¿Incluir screenshots? (y/n): ").strip().lower() == "y"
-    include_github_stats = input("📊 ¿Incluir stats de GitHub? (y/n): ").strip().lower() == "y"
+    # include_screenshots = input("📸 ¿Incluir screenshots? (y/n): ").strip().lower() == "y"
+    # include_github_stats = input("📊 ¿Incluir stats de GitHub? (y/n): ").strip().lower() == "y"
 
-    if include_github_stats:
-        github_repo = input("🔗 URL del repo en GitHub (user/repo): ") or "user/repo"
-    else:
-        github_repo = ""
+    # if include_github_stats:
+    #     github_repo = input("🔗 URL del repo en GitHub (user/repo): ") or "user/repo"
+    # else:
+    #     github_repo = ""
 
-    print("\n⚙️ Pasos de instalación (deja vacío para terminar):")
-    steps = []
-    while True:
-        step = input(f"   Paso {len(steps) + 1}: ")
-        if step.strip() == "":
-            break
-        steps.append(step)
-    installation_steps = "\n".join(steps)
+    # print("\n⚙️ Pasos de instalación (deja vacío para terminar):")
+    # steps = []
+    # while True:
+    #     step = input(f"   Paso {len(steps) + 1}: ")
+    #     if step.strip() == "":
+    #         break
+    #     steps.append(step)
+    # installation_steps = "\n".join(steps)
 
-    usage_example = input("\n▶️ Ejemplo de Uso (opcional): ") or ""
-    important_notes = input("\n⚠️ Notas importantes (opcional): ") or ""
+    # usage_example = input("\n▶️ Ejemplo de Uso (opcional): ") or ""
+    # important_notes = input("\n⚠️ Notas importantes (opcional): ") or ""
 
-    # Secciones personalizadas
-    custom_sections = {}
-    print("\n➕ ¿Quieres agregar secciones personalizadas? (por ejemplo, 'License', 'Contributing', etc.)")
-    while True:
-        section_name = input("   Nombre de la Sección (deja vacío para terminar): ")
-        if section_name.strip() == "":
-            break
-        section_content = input(f"   Contenido de '{section_name}': ")
-        custom_sections[section_name] = section_content
+    # # Secciones personalizadas
+    # custom_sections = {}
+    # print("\n➕ ¿Quieres agregar secciones personalizadas? (por ejemplo, 'License', 'Contributing', etc.)")
+    # while True:
+    #     section_name = input("   Nombre de la Sección (deja vacío para terminar): ")
+    #     if section_name.strip() == "":
+    #         break
+    #     section_content = input(f"   Contenido de '{section_name}': ")
+    #     custom_sections[section_name] = section_content
 
     # Crear configuración final
     config = {
         "project_name": project_name,
         "project_description": project_description,
         "language": language,
-        "include_screenshots": include_screenshots,
-        "include_github_stats": include_github_stats,
-        "github_repo": github_repo,
-        "installation_steps": installation_steps,
-        "usage_example": usage_example,
-        "important_notes": important_notes,
-        "custom_sections": custom_sections
+        # "include_screenshots": include_screenshots,
+        # "include_github_stats": include_github_stats,
+        # "github_repo": github_repo,
+        # "installation_steps": installation_steps,
+        # "usage_example": usage_example,
+        # "important_notes": important_notes,
+        # "custom_sections": custom_sections
     }
 
     # Guardar en readme-config.json
